@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-    "build": "vite build --force",
+    "build": "echo Skipping default build script",
     "preview": "vite preview"
   },
   "dependencies": {
