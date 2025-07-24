@@ -1,17 +1,11 @@
 {
-  "name": "bingeflix-root",
-  "version": "1.0.0",
-  "private": true,
   "scripts": {
     "dev": "vite",
-    "build": "echo Skipping default build script",
-    "preview": "vite preview",
-    "postinstall": "chmod +x node_modules/.bin/vite"
+    "build": "vite build",
+    "postinstall": "chmod +x node_modules/.bin/vite || true"
   },
   "dependencies": {
-    "vite": "^7.0.6"
-  },
-  "devDependencies": {
+    "vite": "^7.0.6",
     "@vitejs/plugin-react-swc": "^3.11.0"
   }
 }
