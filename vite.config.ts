@@ -19,6 +19,9 @@ export default defineConfig(({ mode }) => ({
   resolve: {
     alias: {
       // ... your aliases
-    }
+    },
+    esbuild: {
+    tsconfig: path.resolve(__dirname, 'tsconfig.json') // explicitly use tsconfig.json
+  }
   }
 }));
