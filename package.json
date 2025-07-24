@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "vite",
     "build": "echo Skipping default build script",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "postinstall": "chmod +x node_modules/.bin/vite"
   },
   "dependencies": {
     "vite": "^7.0.6"
