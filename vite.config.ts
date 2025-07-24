@@ -1,10 +1,8 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
-// import lovableTagger from 'lovable-tagger'; // Removed as requested
 
-// https://vite.dev/config/
-export default defineConfig(({ mode }) => ({
+export default defineConfig({
   server: {
     host: "::",
     port: 8080,
@@ -12,16 +10,13 @@ export default defineConfig(({ mode }) => ({
       '/api': 'http://localhost:4000',
     },
   },
-  plugins: [
-    react(),
-    // lovableTagger(), // Removed as requested
-  ],
+  build: {
+    outDir: "dist", // Important for Vercel
+  },
+  plugins: [react()],
   resolve: {
     alias: {
-      // ... your aliases
-    },
-    esbuild: {
-    tsconfig: path.resolve(__dirname, 'tsconfig.json') // explicitly use tsconfig.json
+      // '@components': path.resolve(__dirname, './src/components'), etc.
+    }
   }
-  }
-}));
+});
